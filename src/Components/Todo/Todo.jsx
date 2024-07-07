@@ -3,11 +3,12 @@ import './Todo.css'
 import Form from '../Form/Form';
 import List from '../List/List';
 import DateTime from '../DateTime/DateTime';
+import { getLocalStorageData, setLocalStorageData } from '../LocalStorage/LocalStorage';
 
 const Todo = () => {
 
-  // To store data
-  const [task, setTask]= useState([]);
+  // To store data from local storage
+  const [task, setTask]= useState(() =>getLocalStorageData());
 
   const handleFormSubmit= (inputVal) =>{
     const {id, content, checked}= inputVal;
@@ -24,6 +25,9 @@ const Todo = () => {
 
     setTask((prevTask) => [...prevTask, {id, content, checked}]);
   }
+
+  // Add data to localStorage
+  setLocalStorageData(task);
 
   // Todo task Delete
   const handleTodoDelete= (value) =>{

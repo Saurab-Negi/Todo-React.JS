@@ -21,7 +21,6 @@
   .todo form,
   .datetime {
     margin: 0 1rem;
-    min-height: 10vh;
     width: 100%;
   }
   
@@ -31,7 +30,6 @@
     flex-direction: column;
     justify-content: space-around;
     font-size: 3rem;
-    min-height: 25vh;
     width: 100%;
   }
   
@@ -42,7 +40,7 @@
   }
   
   .date-time {
-    font-size: 2.4rem;
+    font-size: 1.5rem;
     text-align: center;
   }
   
@@ -123,7 +121,7 @@
   }
   
   .todo-item {
-    margin: 2.4rem;
+    margin: 2rem;
     /*word-wrap: break-word;
       */ /*flex-wrap: wrap;
       */
@@ -132,31 +130,32 @@
     border-radius: 30px;
     transition: background-color 200ms ease-in-out;
     background-color: #f2f3f4;
-    min-width: 35rem;
-    max-width: 40rem;
-    padding: 1.6rem 3rem;
+    min-width: 25rem;
+    max-width: 30rem;
+    padding: 0.5rem 1rem;
     display: grid;
-    grid-template-columns: 1fr 0.3fr 0.3fr;
-    justify-content: start;
-    gap: 1.6rem;
+    grid-template-columns: 2fr 0.3fr 0.3fr;
+    justify-content: flex-end;
     /*align-items: center;
       */ /*wrapsthelinks*/
     overflow-wrap: anywhere;
   }
   
   li span {
-    max-width: 20rem;
+    display: flex;
+    align-items: center;
     color: #1c2833;
   }
   
   .check-btn,
   .delete-btn {
-    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    width: 2rem;
     cursor: pointer;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 80%;
-    margin: 0 5px;
+    border-radius: 50%;
     background-color: #fff;
     color: rgb(0, 0, 0);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -181,14 +180,10 @@
   }
   
   .clear-btn {
-    background-color: #e74c3c;
+    background-color: #ff2a12;
     font-size: 1.6rem;
     padding: 0.5rem 1.5rem;
-    border-radius: 0.3rem;
-    -webkit-border-radius: 0.3rem;
-    -moz-border-radius: 0.3rem;
-    -ms-border-radius: 0.3rem;
-    -o-border-radius: 0.3rem;
+    border-radius: 5rem;
   }
   
   .clear-btn:hover {
